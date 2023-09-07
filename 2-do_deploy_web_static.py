@@ -6,7 +6,7 @@ from fabric.api import env,put,run
 env_hosts = ["100.25.14.86","54.236.115.46"]
 
 
-def do_depoly(archive_path):
+def do_deploy(archive_path):
     """Distributes archive to web server"""
     if os.path.isfile(archive_path) is False:
         return False
