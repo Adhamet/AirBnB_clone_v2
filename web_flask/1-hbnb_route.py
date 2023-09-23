@@ -7,8 +7,16 @@ app = Flask(__name__)
 
 # Define Route
 @app.route('/', strict_slashes=False)
-def home():
+def hello_hbnb():
+    """prints Hello HBNB"""
     return 'Hello HBNB!'
+
+
+# Define Route
+@app.route('/hbnb', strict_slashes=False)
+def hbnb():
+    """prints HBNB"""
+    return 'HBNB'
 
 
 if __name__ == '__main__':
