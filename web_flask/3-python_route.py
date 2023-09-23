@@ -22,7 +22,8 @@ def hbnb():
 # Define C-Route
 @app.route('/c/', strict_slashes=False)
 @app.route('/c/<text>', strict_slashes=False)
-def custom_text(text='is_cool'):
+def c_text(text='is_cool'):
+    """displays C followed by customtext"""
     text = escape(text).replace('_', ' ')
     return 'C {}'.format(text)
 
@@ -31,6 +32,7 @@ def custom_text(text='is_cool'):
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def py_text(text='is_cool'):
+    """displays Python followed by custom text"""
     text = escape(text).replace('_', ' ')
     return 'Python {}'.format(text)
 

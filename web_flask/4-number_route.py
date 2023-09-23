@@ -20,11 +20,27 @@ def hbnb():
 
 
 # Define C-Route
+@app.route('/c/', strict_slashes=False)
 @app.route('/c/<text>', strict_slashes=False)
-def c_text(text):
+def c_text(text='is_cool'):
     """displays C followed by customtext"""
     text = escape(text).replace('_', ' ')
     return 'C {}'.format(text)
+
+
+# Define Python-Rotue
+@app.route('/python/', defaults={'text': 'is_cool'}, strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def py_text(text):
+    """displays Python followed by custom text"""
+    text = escape(text).replace('_', ' ')
+    return 'Python {}'.format(text)
+
+
+@app.route('/number/<int:n>', strict_slashes=False)
+def is_number(n):
+     """displays n if number"""
+     return "{:d} is a number".format(n)
 
 
 if __name__ == '__main__':
