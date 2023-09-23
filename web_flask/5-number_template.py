@@ -39,8 +39,8 @@ def py_text(text):
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def is_number(n):
-     """displays n if number"""
-     return "{:d} is a number".format(n)
+    """displays n if number"""
+    return "{:d} is a number".format(n)
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
