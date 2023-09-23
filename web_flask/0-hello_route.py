@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Starts flask web application with specific requirements
+"""Starts flask web application with specific requirements"""
 from flask import Flask
 
 app = Flask(__name__)
